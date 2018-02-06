@@ -1,0 +1,90 @@
+<!--main.wxml-->
+
+
+
+  <block wx:for="{{list}}" wx:key="{{list}}">
+
+    <!-- 好文 -->
+    <view class="show" wx:if="{{item.article_first_channel_name==article}}">
+      <view class="haowen-body">
+        <!-- 头部  -->
+        <view class="head">
+          <image src="../../images/tag_haojia_guonei.png" class="head-tag" />
+          <text class="head-text">{{item.article_first_channel_name}}</text>
+        </view>
+        <view class="head-line" />
+
+        <!-- body -->
+        <view class="haowen-part">
+          <div>
+
+
+
+            <view class="haowen-float-view">
+              <image src="{{item.article_avatar}}" class="haowen-article-author" />
+              <text>{{item.article_referrals}}</text>
+            </view>
+
+            <image src="{{item.article_pic}}" class="haowen-img" />
+
+
+
+
+          </div>
+
+
+          <view>
+            <text class="item-article-title">{{item.article_title}}</text>
+          </view>
+
+
+
+        </view>
+        <view class="bottom-line" />
+
+      </view>
+    </view>
+
+
+
+    <!-- 好价 -->
+    <view class="show" wx:else>
+      <view class="haojia-body">
+        <!-- head  -->
+        <view class="head">
+          <image src="../../images/tag_haojia_guonei.png" class="head-tag"></image>
+          <text class="head-text">好价</text>
+        </view>
+        <view class="head-line" />
+
+        <!-- body -->
+        <!-- 图文 左右结构 -->
+        <view class="haojia-part">
+          <image src="{{item.article_pic}}" class="haojia-img" />
+          <!-- 文字上下结构 -->
+          <view class="haojia-article">
+            <view>
+              <text class="item-title">{{item.article_title}}</text>
+            </view>
+            <text class="haojia-price">{{item.article_price}}</text>
+
+            <!-- 灰色标签左右结构 -->
+            <view class="haojia-tag">
+              <text class="haojia-mall">{{item.article_mall}}</text>
+              <view class="haojia-mall-line"></view>
+              <text class="haojia-date">{{item.article_format_date}}</text>
+            </view>
+
+
+          </view>
+
+        </view>
+
+      </view>
+      <view class="bottom-line"/>
+
+
+    </view>
+
+
+  </block>

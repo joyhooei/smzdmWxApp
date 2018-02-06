@@ -1,0 +1,41 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+} 
+.bottom-line {
+  background: #f8f8f8;
+  width: 100%;
+  height: 15px;
+}
+
+.head {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.head-tag {
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 12px;
+  height: 12px;
+}
+
+.head-text {
+  margin-top: 4px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.head-line {
+  background: #f4f4f4;
+  height: 1px;
+  width: 100%;
+}

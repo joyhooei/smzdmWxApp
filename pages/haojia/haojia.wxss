@@ -1,0 +1,114 @@
+/* pages/haojia.wxss */
+
+.banners {
+  width: 100%;
+  height: 180px;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.item-title {
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 15px;
+  color: #000;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.item-article-title {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+  color: #000;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+  flex-direction: column;
+}
+
+
+
+/* 好价 */
+
+.haojia-body {
+  width: 100%;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+}
+
+.haojia-part {
+  display: flex;
+  flex-direction: row;
+}
+
+.haojia-img {
+  margin: 10px;
+  width: 180px;
+  height: 120px;
+}
+
+.haojia-article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+}
+
+.haojia-price {
+  font-size: 13px;
+  color: #dc506b;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.haojia-tag {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 25px;
+}
+
+.haojia-mall {
+  font-size: 12px;
+  color: #969696;
+}
+
+.haojia-mall-line {
+  background: #969696;
+  margin-top: 2px;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 1px;
+  height: 13px;
+}
+
+.haojia-date {
+  font-size: 12px;
+  color: #969696;
+}
+
+
+

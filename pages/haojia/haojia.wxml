@@ -1,0 +1,57 @@
+<!--pages/haojia/haojia.wxml-->
+
+  <!-- <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" class="banners" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{banner}}">
+      <swiper-item>
+        <image src="{{item.img}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+    
+</swiper> -->
+
+  <block wx:for="{{list}}" wx:key="{{list}}">
+
+ 
+
+
+
+   <view class="show">
+      <view class="haojia-body">
+        <!-- head  -->
+        <view class="head">
+          <image src="../../images/tag_haojia_guonei.png" class="head-tag"></image>
+          <text class="head-text">好价</text>
+        </view>
+        <view class="head-line" />
+
+        <!-- body -->
+        <!-- 图文 左右结构 -->
+        <view class="haojia-part">
+          <image src="{{item.article_pic}}" class="haojia-img" />
+          <!-- 文字上下结构 -->
+          <view class="haojia-article">
+            <view>
+              <text class="item-title">{{item.article_title}}</text>
+            </view>
+            <text class="haojia-price">{{item.article_price}}</text>
+
+            <!-- 灰色标签左右结构 -->
+            <view class="haojia-tag">
+              <text class="haojia-mall">{{item.article_mall}}</text>
+              <view class="haojia-mall-line"></view>
+              <text class="haojia-date">{{item.article_format_date}}</text>
+            </view>
+
+
+          </view>
+
+        </view>
+
+      </view>
+      <view class="bottom-line"/>
+
+
+    </view>
+
+
+  </block>

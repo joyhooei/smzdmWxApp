@@ -1,0 +1,42 @@
+<!--pages/haowen/haowen.wxml-->
+
+<block wx:for="{{list}}" wx:key="{{list}}">
+
+    <!-- 好文 -->
+    <view class="show">
+      <view class="haowen-body">
+      
+
+        <!-- body -->
+        <view class="haowen-part">
+          <div>
+
+
+
+            <view class="haowen-float-view">
+              <image src="{{item.article_avatar}}" class="haowen-article-author" />
+              <text class="haowen-article-text">{{item.article_referrals}}</text>
+            </view>
+
+            <image src="{{item.article_pic}}" class="haowen-img" />
+
+
+
+
+          </div>
+
+
+          <view>
+            <text class="item-article-title">{{item.article_title}}</text>
+          </view>
+
+
+
+        </view>
+        <view class="bottom-line" />
+
+      </view>
+    </view>
+
+</block>
+
