@@ -9,7 +9,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.8",
-	"appid": "touristappid",
+	"appid": "wxb3c468822561d7c5",
 	"projectname": "smzdm",
 	"condition": {
 		"search": {
@@ -25,12 +25,13 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": -1,
 			"list": [
 				{
 					"id": -1,
 					"name": "haowen",
-					"pathName": "pages/haowen/haowen"
+					"pathName": "pages/haowen/haowen",
+					"query": ""
 				}
 			]
 		}

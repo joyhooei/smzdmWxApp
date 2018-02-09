@@ -39,3 +39,10 @@
   height: 1px;
   width: 100%;
 }
+
+
+.base{
+  color: #969696;
+  width:100%;
+  height: 100%;
+}

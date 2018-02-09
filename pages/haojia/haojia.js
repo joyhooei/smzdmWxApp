@@ -1,6 +1,6 @@
 // pages/haojia.js
 
-
+var pages = 0
 Page({
 
   /**
@@ -9,7 +9,7 @@ Page({
 
 
   data: {
-   
+    list:[]
 
   },
 
@@ -18,8 +18,8 @@ Page({
    */
   onLoad: function (options) {
 
-
-
+    pages =0
+    wx.showNavigationBarLoading()
     var that = this
     wx.request({
       url: 'https://api.smzdm.com/v1/home/articles_new?f=wxapp&wxapp=zdmapp&limit=20',
@@ -27,7 +27,7 @@ Page({
         'Content-Type': 'application/json'
       },
       data: {
-        offset: '0'
+        offset: pages
       },
       method: 'GET',
       success: function (res) {
@@ -36,8 +36,10 @@ Page({
           list: res.data.data.rows
         })
       },
-      fail: function (res) {
+      fail: function () {
 
+      },complete:function(){
+        wx.hideNavigationBarLoading()
       }
 
     })
@@ -77,8 +79,10 @@ Page({
    */
   onPullDownRefresh: function () {
     var that = this
+    pages=0
     console.log("onPullDownRefresh")
-    wx.stopPullDownRefresh();
+wx.stopPullDownRefresh()
+wx.showNavigationBarLoading()
 
     wx.request({
       url: 'https://api.smzdm.com/v1/home/articles_new?f=wxapp&wxapp=zdmapp&limit=20',
@@ -86,17 +90,22 @@ Page({
         'Content-Type': 'application/json'
       },
       data: {
-        offset: '0'
+        offset: pages
       },
       method: 'GET',
       success: function (res) {
         console.log(res.data)
+       
         that.setData({
           list: res.data.data.rows
         })
       },
-      fail: function (res) {
-
+      fail: function () {
+     
+      },
+      complete:function(){
+        wx.hideNavigationBarLoading()
+        wx.stopPullDownRefresh()
       }
 
     })
@@ -109,8 +118,36 @@ Page({
    */
   onReachBottom: function () {
     console.log("onReachBottom")
+     var that=this
+      pages+=21
+     wx.request({
+       url: 'https://api.smzdm.com/v1/home/articles_new?f=wxapp&wxapp=zdmapp&limit=20',
+       header: {
+         'Content-Type': 'application/json'
+       },
+       data: {
+         offset: pages
+       },
+       method: 'GET',
+       success: function (res) {
+         console.log(res.data)
+         var list = that.data.list.concat(res.data.data.rows)
+        
+         that.setData({
+           list: list
+           
+         })
      
-    
+       },
+       fail: function () {
+         
+       },complete:function(){
+         wx.hideNavigationBarLoading()
+       }
+
+     })
+
+
 
   },
 

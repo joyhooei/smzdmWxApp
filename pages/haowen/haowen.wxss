@@ -1,13 +1,13 @@
 /* pages/haowen/haowen.wxss */
+
 /* 好文 */
 
 .haowen-body {
   width: 100%;
-  height: 240px;
+  height: 260px;
   display: flex;
   flex-direction: column;
 }
-
 
 .haowen-part {
   display: flex;
@@ -16,44 +16,105 @@
 
 .haowen-float-view {
   display: flex;
-  width:200px;
-  height:20px;
+  width: 200px;
+  height: 20px;
   flex-direction: row;
-    left: 20px;
-  top: 110px;
+  left: 10px;
+  top: 120px;
+  position: relative;
+  z-index: 1;
+}
+
+.haowen-float-time {
+  display: flex;
+  width: 50px;
+  height: 20px;
+  flex-direction: row;
+  float: right;
+  top: 100px;
   position: relative;
   z-index: 1;
 }
 
 .haowen-article-author {
- border-radius: 10px;
+  border-radius: 10px;
   width: 20px;
   height: 20px;
 }
-.haowen-article-text{
-  margin-top:3px;
-  font-size:10px;
-  margin-left:10px;
-  color:white;
+
+.haowen-article-text {
+  margin-top: 3px;
+  font-size: 10px;
+  margin-left: 10px;
+  color: white;
 }
 
 .haowen-img {
-  background: #000;
-  margin-top: -30px;
+  border-radius: 2px;
+  background: gray;
+  margin-top: -40px;
   width: 100%;
-  max-width: 100%;
   height: 150px;
 }
+
 .item-article-title {
   margin-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
   font-size: 15px;
   color: #000;
+  height: 40px;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-all;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  font-weight: bold;
+}
+
+.div-image {
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.haowen-tag {
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #a6a6a6;
+  width: 250px;
+  font-size: 12px;
+}
+
+.haowen-collection-text {
+  margin-top: 10px;
+  margin-left: 5px;
+  color: #a6a6a6;
+  font-size: 12px;
+}
+
+.haowen-tag-div {
+  padding-bottom: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.haowen-tag-collection-div {
+  display: flex;
+  width: 100px;
+  float: right;
+}
+
+.haowen-tag-img {
+  margin-top: 12px;
+  width: 13px;
+  height: 13px;
+}
+.haowen-tag-comment-img {
+  margin-left:20px;
+  margin-top: 12px;
+  width: 13px;
+  height: 13px;
 }

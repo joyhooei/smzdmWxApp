@@ -11,10 +11,12 @@
 }
 
 .item-title {
+  font-weight: bold;
   margin-top: 10px;
   margin-right: 10px;
   font-size: 15px;
   color: #000;
+  height: 40px;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -47,8 +49,6 @@
   flex-direction: column;
 }
 
-
-
 /* 好价 */
 
 .haojia-body {
@@ -77,22 +77,32 @@
 }
 
 .haojia-price {
+  height: 40px;
   font-size: 13px;
-  color: #dc506b;
+  color: #df5d58;
   margin-top: 15px;
   margin-right: 10px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .haojia-tag {
-  margin-top: 20px;
   display: flex;
   flex-direction: row;
-  width: 100%;
   height: 25px;
 }
 
 .haojia-mall {
+  max-width: 50px;
   font-size: 12px;
+  height: 25px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   color: #969696;
 }
 
@@ -110,5 +120,47 @@
   color: #969696;
 }
 
+.haojia-tag-div {
 
+  padding-bottom: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 
+}
+
+.haojia-tag-collection-div {
+
+  display: flex;
+  float: right;
+}
+
+.haojia-tag-img {
+  margin-top: 2px;
+  width: 13px;
+  height: 13px;
+}
+
+.haojia-collection-text {
+  margin-left: 5px;
+  color: #a6a6a6;
+  font-size: 12px;
+}
+
+.right-view {
+  display: flex;
+  flex-direction: row;
+}
+
+.haojia-tag-comment-img {
+  margin-top: 2px;
+  margin-left: 10px;
+  width: 13px;
+  height: 13px;
+}
+
+.haojia-collection-text {
+  margin-left: 5px;
+  color: #a6a6a6;
+  font-size: 12px;
+}

@@ -2,41 +2,63 @@
 
 <block wx:for="{{list}}" wx:key="{{list}}">
 
-    <!-- 好文 -->
-    <view class="show">
-      <view class="haowen-body">
-      
-
-        <!-- body -->
-        <view class="haowen-part">
-          <div>
+  <!-- 好文 -->
+  <view class="show">
+    <view class="haowen-body">
 
 
-
-            <view class="haowen-float-view">
-              <image src="{{item.article_avatar}}" class="haowen-article-author" />
-              <text class="haowen-article-text">{{item.article_referrals}}</text>
-            </view>
-
-            <image src="{{item.article_pic}}" class="haowen-img" />
+      <!-- body -->
+      <view class="haowen-part">
+        <div class="div-image">
 
 
 
-
-          </div>
-
-
-          <view>
-            <text class="item-article-title">{{item.article_title}}</text>
+          <view class="haowen-float-view">
+            <image src="{{item.article_avatar}}" class="haowen-article-author" />
+            <text class="haowen-article-text">{{item.article_referrals}}</text>
           </view>
 
 
+          <view class="haowen-float-time">
+            <text class="haowen-article-text">{{item.article_format_date}}</text>
+          </view>
 
+          <image src="{{item.article_pic}}" class="haowen-img" />
+
+
+
+
+        </div>
+
+
+        <view>
+
+          <view style="display:flex;flex-direction:row;">
+            <text class="item-article-title">{{item.article_title}}</text>
+
+
+          </view>
         </view>
-        <view class="bottom-line" />
+
+
 
       </view>
+
+
+      <div class="haowen-tag-div">
+        <text class="haowen-tag">{{item.tag_category}}</text>
+        <view class="haowen-tag-collection-div">
+          <image class="haowen-tag-img" src="../../images/search_wikihuati_icon.png"></image>
+          <text class="haowen-collection-text">{{item.article_collection}}</text>
+          <image class="haowen-tag-comment-img" src="../../images/search_wikiicon_dianping.png"></image>
+          <text class="haowen-collection-text">{{item.article_comment}}</text>
+        </view>
+      </div>
+
+
+      <view class="bottom-line" />
+
     </view>
+  </view>
 
 </block>
-

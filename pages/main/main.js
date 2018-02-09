@@ -1,4 +1,5 @@
 // main.js
+var pages = 0
 Page({
 
   /**
@@ -7,13 +8,16 @@ Page({
 
 
   data: {
+    list: [],
+    info: '资讯',
     article: '好文',
     condition: false,
     duration: 2000,
     indicatorDots: true,
     autoplay: true,
     interval: 3000,
-    loading: false
+    loading: false,
+    wrothy: '0'
 
 
   },
@@ -43,23 +47,29 @@ Page({
     // })
 
     var that = this
+    wx.showNavigationBarLoading()
+    console.log(pages)
     wx.request({
       url: 'https://api.smzdm.com/v1/home/articles?f=wxapp&wxapp=zdmapp&limit=20',
       header: {
         'Content-Type': 'application/json'
       },
       data: {
-        offset: '0'
+        offset: pages
       },
       method: 'GET',
       success: function (res) {
         console.log(res.data)
+
+
         that.setData({
-          list: res.data.data.rows
+          list: res.data.data.rows,
         })
       },
-      fail: function (res) {
+      fail: function () {
 
+      },complete:function(){
+        wx.hideNavigationBarLoading()
       }
 
     })
@@ -99,16 +109,18 @@ Page({
    */
   onPullDownRefresh: function () {
     var that = this
+    pages = 0
     console.log("onPullDownRefresh")
-    wx.stopPullDownRefresh();
+    console.log(pages)
 
+    wx.showNavigationBarLoading()
     wx.request({
       url: 'https://api.smzdm.com/v1/home/articles?f=wxapp&wxapp=zdmapp&limit=20',
       header: {
         'Content-Type': 'application/json'
       },
       data: {
-        offset: '0'
+        offset: pages
       },
       method: 'GET',
       success: function (res) {
@@ -116,9 +128,14 @@ Page({
         that.setData({
           list: res.data.data.rows
         })
+   
       },
-      fail: function (res) {
-
+      fail: function () {
+       
+      },
+      complete:function(){
+        wx.hideNavigationBarLoading()
+        wx.stopPullDownRefresh()
       }
 
     })
@@ -130,9 +147,38 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    pages += 20
     console.log("onReachBottom")
+    wx.showNavigationBarLoading()
+    console.log(pages)
+    var that = this
+    wx.request({
+      url: 'https://api.smzdm.com/v1/home/articles?f=wxapp&wxapp=zdmapp&limit=20',
+      header: {
+        'Content-Type': 'application/json'
+      },
+      data: {
+        offset: pages
+      },
+      method: 'GET',
+      success: function (res) {
+        console.log(res.data)
+        var list = that.data.list.concat(res.data.data.rows)
+        that.setData({
 
+          list: list
+        })
+       
+ 
+      },
+      fail: function () {
 
+      
+      },complete:function(){
+        wx.hideNavigationBarLoading()
+      }
+
+    })
 
   },
 
