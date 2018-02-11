@@ -9,7 +9,8 @@ Page({
 
   data: {
     list: [],
-    info: '资讯',
+    discount: '优惠',
+    worldbuy:'海淘',
     article: '好文',
     condition: false,
     duration: 2000,
@@ -74,6 +75,16 @@ Page({
 
     })
 
+ 
+  },
+  detail: function (event) {
+    
+    wx.navigateTo({
+
+
+      url:  "../../pages/maininfo/maininfo?id=1"
+
+    })
   },
 
   /**
@@ -87,6 +98,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
+
 
   },
 

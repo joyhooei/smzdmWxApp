@@ -4,8 +4,10 @@
 
 <block class="base" wx:for="{{list}}" wx:key="{{list}}">
 
+
   <!-- 好文 -->
   <view class="show" wx:if="{{item.article_first_channel_name==article}}">
+  
     <view class="haowen-body">
 
       <view class="head">
@@ -73,8 +75,8 @@
 
 
 
-  <!-- 好价 -->
-  <view class="show" wx:else>
+  <view class="show" wx:else >
+<navigator url="../../pages/maininfo/maininfo?id={{item.article_id}}" hover-class="navigator-hover">
     <view class="haojia-body">
       <!-- head  -->
       <view class="head">
@@ -111,18 +113,21 @@
               <text class="haojia-collection-text">{{item.article_comment}}</text>
 
 
-              <!-- 资讯 -->
-              <view class="right-view" wx:if="{{item.article_channel_name==info}}">
-                <image class="haojia-tag-comment-img" src="../../images/tab_btn_qiuzan.png"></image>
-                <text class="haojia-collection-text">{{item.article_love_count}}</text>
-              </view>
+                   <!-- 好价 -->
+              <view class="right-view" wx:if="{{item.article_channel_name==discount||item.article_channel_name==worldbuy}}">
+               
 
-              <!-- 好价 -->
-              <view class="right-view" wx:else>
-                <image class="haojia-tag-comment-img" src="../../images/search_wikiicon_zhi.png"></image>
+
+                 <image class="haojia-tag-comment-img" src="../../images/search_wikiicon_zhi.png"></image>
                 <text class="haojia-collection-text">{{(filters.parse(item.article_unworthy)+filters.parse(item.article_worthy))== '0'?0:filters.parse(filters.toFix(filters.parse(item.article_worthy)/(filters.parse(item.article_unworthy)+filters.parse(item.article_worthy))))*1000/10}}%
                 <!-- 直接*100会出现99.999999 -->
              </text>
+              </view>
+
+        <!-- 资讯 --> 
+              <view class="right-view" wx:else>
+                <image class="haojia-tag-comment-img" src="../../images/tab_btn_qiuzan.png"></image>
+                <text class="haojia-collection-text">{{item.article_love_count}}</text>
 
               </view>
             </view>
@@ -134,9 +139,8 @@
 
     </view>
     <view class="bottom-line" />
-
-
+</navigator>
+ 
   </view>
-
 
 </block>

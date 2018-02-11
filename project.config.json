@@ -32,6 +32,12 @@
 					"name": "haowen",
 					"pathName": "pages/haowen/haowen",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "maininfo",
+					"pathName": "pages/maininfo/maininfo",
+					"query": ""
 				}
 			]
 		}

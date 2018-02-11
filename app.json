@@ -1,10 +1,12 @@
 {
   "pages": [
+    
     "pages/main/main",
     "pages/haojia/haojia",
     "pages/index/index",
     "pages/haowen/haowen",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/maininfo/maininfo"
     
     
 

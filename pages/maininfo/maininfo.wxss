@@ -1,0 +1,60 @@
+/* pages/maininfo/maininfo.wxss */
+@import "../../wxParse/wxParse.wxss";
+.mall-text {
+  margin-left: 10px;
+  font-size: 12px;
+  height: 25px;
+  color: #969696;
+}
+
+.mall-line {
+  background: #969696;
+  margin-top: 2px;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 1px;
+  height: 13px;
+}
+
+.mall-date {
+  font-size: 12px;
+  height: 25px;
+  color: #969696;
+}
+
+.mall-view {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 25px;
+}
+
+.mall-title {
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mall-price {
+  font-size: 18px;
+  width: 100%;
+  height: 40px;
+  color: #df5d58;
+}
+
+.mall-title-div {
+  height: 100%;
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  flex-direction: column;
+}
+
+.mall-desc {
+  font-size: 16px;
+  width: 100%;
+  height: 40px;
+  color: #606060;
+}

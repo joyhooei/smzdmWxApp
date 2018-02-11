@@ -1,4 +1,29 @@
 /**app.wxss**/
+.banners {
+    width: 100%;
+  height: 180px;
+
+  
+ 
+
+  
+}
+.swiper-item{
+display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+  height: 100%;
+}
+
+.slide-image {
+
+
+  width: 200px;
+
+  height: 100%;
+}
 .container {
   height: 100%;
   display: flex;
@@ -45,4 +70,7 @@
   color: #969696;
   width:100%;
   height: 100%;
+}
+.navigaror-hover{
+    color:blue;
 }
