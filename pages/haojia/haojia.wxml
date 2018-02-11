@@ -16,6 +16,7 @@
 
 
   <view class="show">
+  <navigator url="../../pages/maininfo/maininfo?id={{item.article_id}}"> 
     <view class="haojia-body">
       <!-- head  -->
       <view class="head">
@@ -68,6 +69,7 @@
 
 
     </view>
-
+  </navigator>
   </view>
+
 </block>

@@ -1,12 +1,14 @@
 {
   "pages": [
-    
+
     "pages/main/main",
     "pages/haojia/haojia",
     "pages/index/index",
     "pages/haowen/haowen",
     "pages/logs/logs",
-    "pages/maininfo/maininfo"
+    "pages/maininfo/maininfo",
+    "pages/haoweninfo/haoweninfo",
+    "pages/newsinfo/newsinfo"
     
     
 

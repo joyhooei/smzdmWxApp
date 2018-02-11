@@ -2,7 +2,12 @@
 
 <import src="../../wxParse/wxParse.wxml"/> 
 
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" class="banners" interval="{{interval}}" duration="{{duration}}">
+<view  class="banner-view">
+<text style="display:{{display}}" class="jingxuan">{{jingxuan}}</text>  
+<view class="bannerImageView" wx:if="{{bannerLenght == '0'}}">
+<image class="bannerImage"  src="{{article_pic}}"/>
+</view>
+<swiper wx:else indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" class="banners" interval="{{interval}}" duration="{{duration}}">
     <block wx:key="{{banner}}" wx:for="{{banner}}">
       <swiper-item class="swiper-item">
         <image src="{{item.pic}}" class="slide-image"/>
@@ -10,18 +15,19 @@
     </block>
     
 </swiper>
-
+</view>
 <view class="mall-view">
 <text class="mall-text">{{mall}}</text>
-<view class="mall-line"></view>
+<view style="display:{{display}}" class="mall-line"></view>
 <text class="mall-date">{{date}}</text>
-<view class="mall-line"></view>
-<text class="mall-date">爆料人：{{article_referrals}}</text>
+<view style="display:{{display}}" class="mall-line"></view>
+<text class="mall-date">{{article_referrals}}</text>
 </view>
 
 <view class="mall-title-div">
 <text class="mall-title">{{article_title}}</text>
 <text class="mall-price">{{article_price}}</text>
+<view class="mall-horizontal-line"/>
 <text class="mall-desc">{{article_phrase_desc}}</text>
 
 </view>

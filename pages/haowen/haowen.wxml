@@ -3,7 +3,10 @@
 <block wx:for="{{list}}" wx:key="{{list}}">
 
   <!-- 好文 -->
+
+
   <view class="show">
+    <navigator url="../../pages/haoweninfo/haoweninfo?id={{item.article_id}}"> 
     <view class="haowen-body">
 
 
@@ -59,6 +62,7 @@
       <view class="bottom-line" />
 
     </view>
+    </navigator>
   </view>
 
 </block>

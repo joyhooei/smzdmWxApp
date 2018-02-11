@@ -7,140 +7,197 @@
 
   <!-- 好文 -->
   <view class="show" wx:if="{{item.article_first_channel_name==article}}">
-  
-    <view class="haowen-body">
+    <navigator url="../../pages/haoweninfo/haoweninfo?id={{item.article_id}}">
+      <view class="haowen-body">
 
-      <view class="head">
-        <image src="../../images/tag_haojia_guonei.png" class="head-tag"></image>
-        <text class="head-text">{{item.article_channel_name}}</text>
-      </view>
-      <view class="head-line" />
-      <!-- body -->
-      <view class="haowen-part">
-        <div class="div-image">
-
-
-
-          <view class="haowen-float-view">
-            <image src="{{item.article_avatar}}" class="haowen-article-author" />
-            <text class="haowen-article-text">{{item.article_referrals}}</text>
+        <view class="head">
+          <image src="../../images/tag_haojia_guonei.png" class="head-tag"></image>
+          <text class="head-text">{{item.article_channel_name}}</text>
+        </view>
+        <view class="head-line" />
+        <!-- body -->
+        <view class="haowen-part">
+          <div class="div-image">
 
 
+
+            <view class="haowen-float-view">
+              <image src="{{item.article_avatar}}" class="haowen-article-author" />
+              <text class="haowen-article-text">{{item.article_referrals}}</text>
+
+
+            </view>
+
+
+            <view class="haowen-float-time">
+              <text class="haowen-article-text">{{item.article_format_date}}</text>
+            </view>
+
+            <image src="{{item.article_pic}}" class="haowen-img" />
+
+
+
+
+          </div>
+
+
+          <view>
+
+            <view style="display:flex;flex-direction:row;">
+              <text class="item-article-title">{{item.article_title}}</text>
+
+
+            </view>
           </view>
 
 
-          <view class="haowen-float-time">
-            <text class="haowen-article-text">{{item.article_format_date}}</text>
+
+        </view>
+
+
+
+
+        <div class="haowen-tag-div">
+          <text class="haowen-tag">{{item.tag_category}}</text>
+          <view class="haowen-tag-collection-div">
+            <image class="haowen-tag-img" src="../../images/search_wikihuati_icon.png"></image>
+            <text class="haowen-collection-text">{{item.article_collection}}</text>
+            <image class="haowen-tag-comment-img" src="../../images/search_wikiicon_dianping.png"></image>
+            <text class="haowen-collection-text">{{item.article_comment}}</text>
           </view>
-
-          <image src="{{item.article_pic}}" class="haowen-img" />
-
-
-
-
         </div>
 
 
-        <view>
-
-          <view style="display:flex;flex-direction:row;">
-            <text class="item-article-title">{{item.article_title}}</text>
-
-
-          </view>
-        </view>
-
-
+        <view class="bottom-line" />
 
       </view>
-
-
-
-
-      <div class="haowen-tag-div">
-        <text class="haowen-tag">{{item.tag_category}}</text>
-        <view class="haowen-tag-collection-div">
-          <image class="haowen-tag-img" src="../../images/search_wikihuati_icon.png"></image>
-          <text class="haowen-collection-text">{{item.article_collection}}</text>
-          <image class="haowen-tag-comment-img" src="../../images/search_wikiicon_dianping.png"></image>
-          <text class="haowen-collection-text">{{item.article_comment}}</text>
-        </view>
-      </div>
-
-
-      <view class="bottom-line" />
-
-    </view>
+    </navigator>
   </view>
 
 
 
-  <view class="show" wx:else >
-<navigator url="../../pages/maininfo/maininfo?id={{item.article_id}}" hover-class="navigator-hover">
-    <view class="haojia-body">
-      <!-- head  -->
-      <view class="head">
-        <image src="../../images/tag_haojia_guonei.png" class="head-tag"></image>
-        <text class="head-text">{{item.article_channel_name}}</text>
-      </view>
-      <view class="head-line" />
-
-      <!-- body -->
-      <!-- 图文 左右结构 -->
-      <view class="haojia-part">
-        <image src="{{item.article_pic}}" class="haojia-img" />
-        <!-- 文字上下结构 -->
-        <view class="haojia-article">
-          <view>
-            <text class="item-title">{{item.article_title}}</text>
-          </view>
-          <text class="haojia-price">{{item.article_price}}</text>
-
-          <!-- 灰色标签左右结构 -->
 
 
-          <div class="haojia-tag-div">
+  <!-- 好价 -->
+  <view class="show" wx:if="{{item.article_channel_name==discount||item.article_channel_name==worldbuy}}">
+    <navigator url="../../pages/maininfo/maininfo?id={{item.article_id}}" hover-class="navigator-hover">
+      <view class="haojia-body">
+        <!-- head  -->
+        <view class="head">
+          <image src="../../images/tag_haojia_guonei.png" class="head-tag"></image>
+          <text class="head-text">{{item.article_channel_name}}</text>
+        </view>
+        <view class="head-line" />
 
-            <view class="haojia-tag">
-
-              <text class="haojia-mall">{{item.article_rzlx_name}}</text>
-              <text class="haojia-mall">{{item.article_mall}}</text>
-              <view class="haojia-mall-line"></view>
-              <text class="haojia-date">{{item.article_format_date}}</text>
+        <!-- body -->
+        <!-- 图文 左右结构 -->
+        <view class="haojia-part">
+          <image src="{{item.article_pic}}" class="haojia-img" />
+          <!-- 文字上下结构 -->
+          <view class="haojia-article">
+            <view>
+              <text class="item-title">{{item.article_title}}</text>
             </view>
-            <view class="haojia-tag-collection-div">
-              <image class="haojia-tag-img" src="../../images/search_wikiicon_dianping.png"></image>
-              <text class="haojia-collection-text">{{item.article_comment}}</text>
+            <text class="haojia-price">{{item.article_price}}</text>
+
+            <!-- 灰色标签左右结构 -->
 
 
-                   <!-- 好价 -->
-              <view class="right-view" wx:if="{{item.article_channel_name==discount||item.article_channel_name==worldbuy}}">
-               
+            <div class="haojia-tag-div">
+
+              <view class="haojia-tag">
+
+                <text class="haojia-mall">{{item.article_rzlx_name}}</text>
+                <text class="haojia-mall">{{item.article_mall}}</text>
+                <view class="haojia-mall-line"></view>
+                <text class="haojia-date">{{item.article_format_date}}</text>
+              </view>
+              <view class="haojia-tag-collection-div">
+                <image class="haojia-tag-img" src="../../images/search_wikiicon_dianping.png"></image>
+                <text class="haojia-collection-text">{{item.article_comment}}</text>
 
 
-                 <image class="haojia-tag-comment-img" src="../../images/search_wikiicon_zhi.png"></image>
-                <text class="haojia-collection-text">{{(filters.parse(item.article_unworthy)+filters.parse(item.article_worthy))== '0'?0:filters.parse(filters.toFix(filters.parse(item.article_worthy)/(filters.parse(item.article_unworthy)+filters.parse(item.article_worthy))))*1000/10}}%
+                <!-- 好价 -->
+                <view class="right-view">
+
+
+
+                  <image class="haojia-tag-comment-img" src="../../images/search_wikiicon_zhi.png"></image>
+                  <text class="haojia-collection-text">{{(filters.parse(item.article_unworthy)+filters.parse(item.article_worthy))== '0'?0:filters.parse(filters.toFix(filters.parse(item.article_worthy)/(filters.parse(item.article_unworthy)+filters.parse(item.article_worthy))))*1000/10}}%
                 <!-- 直接*100会出现99.999999 -->
              </text>
-              </view>
+                </view>
 
-        <!-- 资讯 --> 
-              <view class="right-view" wx:else>
-                <image class="haojia-tag-comment-img" src="../../images/tab_btn_qiuzan.png"></image>
-                <text class="haojia-collection-text">{{item.article_love_count}}</text>
 
               </view>
-            </view>
-          </div>
+            </div>
+
+          </view>
 
         </view>
 
       </view>
+      <view class="bottom-line" />
+    </navigator>
 
-    </view>
-    <view class="bottom-line" />
-</navigator>
- 
+  </view>
+
+
+  <!-- 资讯 -->
+  <view class="show" wx:else>
+    <navigator url="../../pages/newsinfo/newsinfo?id={{item.article_id}}" hover-class="navigator-hover">
+      <view class="haojia-body">
+        <!-- head  -->
+        <view class="head">
+          <image src="../../images/tag_haojia_guonei.png" class="head-tag"></image>
+          <text class="head-text">{{item.article_channel_name}}</text>
+        </view>
+        <view class="head-line" />
+
+        <!-- body -->
+        <!-- 图文 左右结构 -->
+        <view class="haojia-part">
+          <image src="{{item.article_pic}}" class="haojia-img" />
+          <!-- 文字上下结构 -->
+          <view class="haojia-article">
+            <view>
+              <text class="item-title">{{item.article_title}}</text>
+            </view>
+            <text class="haojia-price">{{item.article_price}}</text>
+
+            <!-- 灰色标签左右结构 -->
+
+
+            <div class="haojia-tag-div">
+
+              <view class="haojia-tag">
+
+                <text class="haojia-mall">{{item.article_rzlx_name}}</text>
+                <text class="haojia-mall">{{item.article_mall}}</text>
+                <view class="haojia-mall-line"></view>
+                <text class="haojia-date">{{item.article_format_date}}</text>
+              </view>
+              <view class="haojia-tag-collection-div">
+                <image class="haojia-tag-img" src="../../images/search_wikiicon_dianping.png"></image>
+                <text class="haojia-collection-text">{{item.article_comment}}</text>
+
+
+                <!-- 资讯 -->
+                <view class="right-view">
+                  <image class="haojia-tag-comment-img" src="../../images/tab_btn_qiuzan.png"></image>
+                  <text class="haojia-collection-text">{{item.article_love_count}}</text>
+
+                </view>
+              </view>
+            </div>
+
+          </view>
+
+        </view>
+
+      </view>
+      <view class="bottom-line" />
+    </navigator>
   </view>
 
 </block>

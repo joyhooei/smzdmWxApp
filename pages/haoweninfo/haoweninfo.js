@@ -1,6 +1,6 @@
-// pages/maininfo/maininfo.js
+// pages/haoweninfo/haoweninfo.js
 
-var WxParse = require('../../wxParse/wxParse.js')
+var WxParse=require('../../wxParse/wxParse.js')
 var title
 var id
 Page({
@@ -9,55 +9,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-    display:'none',
-    jingxuan: '精选',
-    duration: 2000,
-    indicatorDots: true,
-    autoplay: true,
-    interval: 3000
-
+   display:'none'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    id=options.id
     var that = this
-    id = options.id
-
+    wx.showNavigationBarLoading()
     wx.request({
-      url: 'https://api.smzdm.com/v1/wxapp/zdmapp/youhui_detail?f=wxapp&wxapp=zdmapp',
+      url: 'https://api.smzdm.com/v1/wxapp/zdmapp/post_detail?f=wxapp&wxapp=zdmapp',
       data: {
         id: options.id
-      },
-      method: 'GET'
-      , success: function (res) {
 
-
+      }
+      ,
+      method: 'GET',
+      success: function (res) {
+        console.log(res.data)
         that.setData({
           display:'flex',
           title: res.data.data.article_title,
-          article_pic: res.data.data.article_pic,
-          bannerLenght: res.data.data.article_product_focus_pic_url.length,
-          banner: res.data.data.article_product_focus_pic_url,
-          mall: res.data.data.article_mall,
-          date: res.data.data.article_format_date,
-          article_referrals: '爆料人：' + res.data.data.article_referrals,
+          banner: res.data.data.article_pic,
+          yuanchuang: '原创',
           article_title: res.data.data.article_title,
-          article_price: res.data.data.article_price,
-          article_phrase_desc: res.data.data.article_phrase_desc
-
+          article_avatar: res.data.data.article_avatar,
+          article_referrals: res.data.data.article_referrals,
+          article_format_date: res.data.data.article_format_date,
+          article_filter_content: res.data.data.article_filter_content
         })
+        WxParse.wxParse('content', 'html', res.data.data.article_filter_content,that);
+      },
+      complete: function () {
 
-
-
-        WxParse.wxParse('article_content', 'html', res.data.data.article_content, that, 5);
-        WxParse.wxParse('product_intro', 'html', res.data.data.product_intro, that, 5);
-
-
+        wx.hideNavigationBarLoading()
       }
 
     })
+
   },
 
   /**
@@ -92,7 +83,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    wx.stopPullDownRefresh()
+wx.stopPullDownRefresh()
   },
 
   /**
@@ -111,7 +102,7 @@ Page({
     }
     return {
       title: title,
-      path: 'pages/maininfo/maininfo?id={{id}}',
+      path: 'pages/haoweninfo/haoweninfo?id={{id}}',
       success: function (res) {
 
         console.log("success")

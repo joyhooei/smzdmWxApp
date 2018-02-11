@@ -38,6 +38,12 @@
 					"name": "maininfo",
 					"pathName": "pages/maininfo/maininfo",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "newsinfo",
+					"pathName": "pages/newsinfo/newsinfo",
+					"query": ""
 				}
 			]
 		}
