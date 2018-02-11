@@ -79,7 +79,7 @@
 
 
   <!-- 好价 -->
-  <view class="show" wx:if="{{item.article_channel_name==discount||item.article_channel_name==worldbuy}}">
+  <view class="show" wx:elif="{{item.article_channel_name==discount||item.article_channel_name==worldbuy}}">
     <navigator url="../../pages/maininfo/maininfo?id={{item.article_id}}" hover-class="navigator-hover">
       <view class="haojia-body">
         <!-- head  -->
