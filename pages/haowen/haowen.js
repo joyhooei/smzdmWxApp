@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: []
+    list: [],
+    isHideLoadMore:false
   },
 
   /**
@@ -112,6 +113,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    isHideLoadMore:true
     var that = this
     pages += 20
     console.log(pages)

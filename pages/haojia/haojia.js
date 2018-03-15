@@ -9,7 +9,8 @@ Page({
 
 
   data: {
-    list:[]
+    list:[],
+    isHideLoadMore:false
 
   },
 
@@ -118,6 +119,7 @@ wx.showNavigationBarLoading()
    */
   onReachBottom: function () {
     console.log("onReachBottom")
+    isHideLoadMore:true
      var that=this
       pages+=21
      wx.request({

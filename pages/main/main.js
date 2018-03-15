@@ -18,9 +18,8 @@ Page({
     autoplay: true,
     interval: 3000,
     loading: false,
-    wrothy: '0'
-
-
+    wrothy: '0',
+    isHideLoadMore:false
   },
 
   /**
@@ -162,6 +161,7 @@ Page({
   onReachBottom: function () {
     pages += 20
     console.log("onReachBottom")
+    isHideLoadMore :true
     wx.showNavigationBarLoading()
     console.log(pages)
     var that = this

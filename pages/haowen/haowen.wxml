@@ -1,5 +1,5 @@
 <!--pages/haowen/haowen.wxml-->
-
+<view>
 <block wx:for="{{list}}" wx:key="{{list}}">
 
   <!-- 好文 -->
@@ -66,3 +66,8 @@
   </view>
 
 </block>
+<view class="weui-loadmore" hidden="{{isHideLoadMore}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
+</view>
