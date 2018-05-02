@@ -108,7 +108,7 @@
 
               <view class="haojia-tag">
 
-                <text class="haojia-mall">{{item.article_rzlx_name}}</text>
+             
                 <text class="haojia-mall">{{item.article_mall}}</text>
                 <view class="haojia-mall-line"></view>
                 <text class="haojia-date">{{item.article_format_date}}</text>
@@ -174,7 +174,7 @@
               <view class="haojia-tag">
 
                 <text class="haojia-mall">{{item.article_rzlx_name}}</text>
-                <text class="haojia-mall">{{item.article_mall}}</text>
+            
                 <view class="haojia-mall-line"></view>
                 <text class="haojia-date">{{item.article_format_date}}</text>
               </view>

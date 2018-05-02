@@ -20,12 +20,16 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -44,6 +48,17 @@
 					"name": "newsinfo",
 					"pathName": "pages/newsinfo/newsinfo",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "haojia",
+					"pathName": "pages/haojia/haojia",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "main",
+					"pathName": "pages/main/main"
 				}
 			]
 		}

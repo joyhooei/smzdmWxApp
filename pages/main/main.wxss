@@ -78,7 +78,8 @@
 
 .haowen-float-time {
   display: flex;
-  width: 50px;
+  width: 60px;
+  max-width: 100px;
   height: 20px;
   flex-direction: row;
   float: right;
@@ -88,27 +89,35 @@
 }
 
 .haowen-article-author {
+
   border-radius: 10px;
   width: 20px;
   height: 20px;
 }
 
 .haowen-article-text {
-  margin-top: 3px;
+   margin-top: 3px;
   font-size: 10px;
   margin-left: 10px;
-  color: white;
+text-align: center;
+     color: #FFF;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 2px;
+  background: #de554f;
+   height: 15px;
+
 }
 
 .haowen-img {
   border-radius: 2px;
-  background: #000;
   margin-top: -40px;
   width: 100%;
   height: 150px;
 }
 
 .item-article-title {
+  
   margin-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
@@ -199,6 +208,7 @@
 }
 
 .haojia-price {
+  font-weight: bold;
   height: 40px;
   font-size: 13px;
   color: #df5d58;
@@ -216,31 +226,46 @@
   display: flex;
   flex-direction: row;
 
-  height: 25px;
+
 }
 
 .haojia-mall {
+   height: 15px;
+   color: #FFF;
+   text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 2px;
+  background: #de554f;
   max-width: 50px;
-  font-size: 12px;
-  height: 25px;
+  font-size: 10px;
+
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: #969696;
+
 }
 
 .haojia-mall-line {
+  display: none;
   background: #969696;
   margin-top: 2px;
   margin-right: 5px;
   margin-left: 5px;
   width: 1px;
-  height: 13px;
+
 }
 
 .haojia-date {
-  font-size: 12px;
-  color: #969696;
+   height: 15px;
+  font-size: 10px;
+
+margin-left: 10px;
+   color: #FFF;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 2px;
+  background: #de554f;
 }
 
 .haojia-collection-text {
@@ -250,8 +275,8 @@
 }
 
 .haojia-tag-div {
-  height: 100%;
-  padding-bottom: 8px;
+
+
   width: 100%;
   display: flex;
   justify-content: space-between;

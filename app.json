@@ -14,12 +14,12 @@
 
   ],
   "window": {
-    "backgroundColor":"#f1f1f1",
+    "backgroundColor":"#de554f",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#de554f",
     "navigationBarTitleText": "什么值得买",
     "navigationBarTextStyle": "white",
-    "enablePullDownRefresh":"true",
+    "enablePullDownRefresh":true,
     "onReachBottomDistance":"50"
 
   }

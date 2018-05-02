@@ -24,7 +24,7 @@ Page({
   onLoad: function (options) {
     var that = this
     id = options.id
-
+console.info(id)
     wx.request({
       url: 'https://api.smzdm.com/v1/wxapp/zdmapp/youhui_detail?f=wxapp&wxapp=zdmapp',
       data: {

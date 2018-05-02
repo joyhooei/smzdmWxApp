@@ -19,6 +19,7 @@ Page({
     id=options.id
     var that = this
     wx.showNavigationBarLoading()
+    console.info(id)
     wx.request({
       url: 'https://api.smzdm.com/v1/wxapp/zdmapp/post_detail?f=wxapp&wxapp=zdmapp',
       data: {
@@ -39,8 +40,10 @@ Page({
           article_referrals: res.data.data.article_referrals,
           article_format_date: res.data.data.article_format_date,
           article_filter_content: res.data.data.article_filter_content
+         
         })
-        WxParse.wxParse('content', 'html', res.data.data.article_filter_content,that);
+        WxParse.wxParse('content', 'html', res.data.data.article_filter_content, that)
+       
       },
       complete: function () {
 

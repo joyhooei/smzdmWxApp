@@ -10,7 +10,7 @@
 <view class="author-view">
 <image  src="{{article_avatar}}" class="author-img"></image>
 <text class="author-text">{{article_referrals}}</text>
-<view style="display:{{display}}" class="author-line"></view>
+<view  class="author-line"></view>
 <text class="author-date">{{article_format_date}}</text>
 </view>
 <view class="wxParse">

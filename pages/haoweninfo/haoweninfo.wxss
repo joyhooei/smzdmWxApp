@@ -12,6 +12,8 @@
 }
 
 .yuanchuang {
+   border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
   display: flex;
   justify-content: center;
   top: 20px;
@@ -47,20 +49,30 @@
   width:100%;
   display: flex;
   flex-direction: row;
-  height: 30px;
+
 }
 .author-text{
-margin-top:3px; 
+margin-top: 5px;
+margin-bottom: 5px;
+  margin-right: 10px;
+   color: #FFF;
+   text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 2px;
+  background: #de554f;
+
    margin-left: 10px;
   font-size: 12px;
-  max-width: 60px;
-  height: 25px;
-  color: #969696;
+ 
+ 
+
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .author-line {
+  display: none;
   background: #969696;
   margin-top: 4px;
   margin-right: 5px;
@@ -70,12 +82,21 @@ margin-top:3px;
 
 }
 .author-date{
-margin-top:3px; 
+  margin-top: 5px;
+margin-bottom: 5px;
+  margin-right: 10px;
+   color: #FFF;
+   text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 2px;
+  background: #de554f;
+
 
   font-size: 12px;
-  max-width: 60px;
-  height: 25px;
-  color: #969696;
+ 
+
+
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

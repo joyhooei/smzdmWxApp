@@ -18,6 +18,7 @@ Page({
   onLoad: function (options) {
     id = options.id
    var that=this
+   console.info(id)
    wx.request({
      url: 'https://api.smzdm.com/v1/wxapp/zdmapp/news_detail?f=wxapp&wxapp=zdmapp',
      data:{

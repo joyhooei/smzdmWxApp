@@ -37,6 +37,8 @@
 }
 
 .jingxuan {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
   top: 20px;
   background: #df5d58;
   color: white;
@@ -50,17 +52,25 @@
 }
 
 .mall-text {
+  margin-right: 10px;
+   color: #FFF;
+   text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 2px;
+  background: #de554f;
   margin-left: 10px;
   font-size: 12px;
   max-width: 60px;
-  height: 25px;
-  color: #969696;
+   height: 15px;
+  
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .mall-line {
+  display: none;
   background: #969696;
   margin-top: 2px;
   margin-right: 5px;
@@ -70,9 +80,16 @@
 }
 
 .mall-date {
+   height: 15px;
+    margin-right: 10px;
+   color: #FFF;
+   text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 2px;
+  background: #de554f;
   font-size: 12px;
-  height: 25px;
-  color: #969696;
+  
 }
 
 .mall-view {
@@ -80,12 +97,13 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 25px;
+
 }
 
 .mall-title {
+  margin-top: 10px;
     min-height: 60px;
-  max-height: 90px;
+  max-height: 120px;
   width: 100%;
 
   font-size: 20px;
@@ -96,6 +114,7 @@
   font-size: 18px;
   width: 100%;
   height: 40px;
+  font-weight: bold;
   color: #df5d58;
 }
 
@@ -107,6 +126,7 @@
 }
 
 .mall-desc {
+  margin-top: 20px;
   font-size: 16px;
   width: 100%;
   height: 40px;

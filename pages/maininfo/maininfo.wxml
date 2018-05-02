@@ -18,16 +18,16 @@
 </view>
 <view class="mall-view">
 <text class="mall-text">{{mall}}</text>
-<view style="display:{{display}}" class="mall-line"></view>
+<view  class="mall-line"></view>
 <text class="mall-date">{{date}}</text>
-<view style="display:{{display}}" class="mall-line"></view>
+<view class="mall-line"></view>
 <text class="mall-date">{{article_referrals}}</text>
 </view>
 
 <view class="mall-title-div">
 <text class="mall-title">{{article_title}}</text>
 <text class="mall-price">{{article_price}}</text>
-<view class="mall-horizontal-line"/>
+
 <text class="mall-desc">{{article_phrase_desc}}</text>
 
 </view>
