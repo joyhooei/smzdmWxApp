@@ -14,5 +14,5 @@
 
 ![图1](https://s1.ax1x.com/2018/05/03/CttGad.png)
 
-### 扫码体验小程序
+### 微信扫码体验小程序
 ![小程序码](https://s1.ax1x.com/2018/05/03/CtttPI.jpg)
