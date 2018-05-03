@@ -12,5 +12,7 @@
 
 ## 截图
 
-![图1](https://github.com/gdmec07120731/smzdmWxApp/blob/master/screenshoot/1987C77A-F876-42B1-8A99-F5D0E8CA21AC.png)
-![小程序码](https://github.com/gdmec07120731/smzdmWxApp/blob/master/screenshoot/qrcode.jpg)
+![图1](https://s1.ax1x.com/2018/05/03/CttGad.png)
+
+### 扫码体验小程序
+![小程序码](https://s1.ax1x.com/2018/05/03/CtttPI.jpg)
