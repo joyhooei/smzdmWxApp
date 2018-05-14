@@ -223,6 +223,8 @@ text-align: center;
 }
 
 .haojia-tag {
+  align-content: center;
+
   display: flex;
   flex-direction: row;
 
@@ -230,7 +232,9 @@ text-align: center;
 }
 
 .haojia-mall {
-   height: 15px;
+  height: 15px;
+  justify-content:center;
+align-content: center;
    color: #FFF;
    text-align: center;
   padding-left: 5px;
@@ -275,8 +279,7 @@ margin-left: 10px;
 }
 
 .haojia-tag-div {
-
-
+  
   width: 100%;
   display: flex;
   justify-content: space-between;

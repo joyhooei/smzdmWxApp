@@ -16,7 +16,7 @@
     
 </swiper>
 </view>
-<view class="mall-view">
+<view style="display:{{display}}" class="mall-view">
 <text class="mall-text">{{mall}}</text>
 <view  class="mall-line"></view>
 <text class="mall-date">{{date}}</text>

@@ -11,7 +11,7 @@
 <view class="author-view">
 <image  src="{{article_avatar}}" class="author-img"></image>
 
-<text class="author-date">{{article_format_date}}</text>
+<text style="display:{{display}}"  class="author-date">{{article_format_date}}</text>
 </view>
 <view class="wxParse">
 <template is="wxParse" data="{{wxParseData:content.nodes}}"/>

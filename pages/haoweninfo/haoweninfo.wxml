@@ -7,11 +7,11 @@
 
 
 <text class="article_title">{{article_title}}</text>
-<view class="author-view">
+<view style="display:{{display}}"  class="author-view">
 <image  src="{{article_avatar}}" class="author-img"></image>
-<text class="author-text">{{article_referrals}}</text>
+<text   class="author-text">{{article_referrals}}</text>
 <view  class="author-line"></view>
-<text class="author-date">{{article_format_date}}</text>
+<text  class="author-date">{{article_format_date}}</text>
 </view>
 <view class="wxParse">
 <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
