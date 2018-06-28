@@ -1,20 +1,17 @@
-/* pages/haowen/haowen.wxss */
-
-/* 好文 */
-
-.haowen-body {
+/* pages/articleList/articleList.wxss */
+.articleList-body {
   width: 100%;
   height: 260px;
   display: flex;
   flex-direction: column;
 }
 
-.haowen-part {
+.articleList-part {
   display: flex;
   flex-direction: column;
 }
 
-.haowen-float-view {
+.articleList-float-view {
   display: flex;
   width: 200px;
   height: 20px;
@@ -25,7 +22,7 @@
   z-index: 1;
 }
 
-.haowen-float-time {
+.articleList-float-time {
   display: flex;
   width: 50px;
   height: 20px;
@@ -36,13 +33,13 @@
   z-index: 1;
 }
 
-.haowen-article-author {
+.articleList-article-author {
   border-radius: 10px;
   width: 20px;
   height: 20px;
 }
 
-.haowen-article-text {
+.articleList-article-text {
    height: 15px;
   margin-top: 3px;
   font-size: 10px;
@@ -55,7 +52,7 @@ text-align: center;
   background: #de554f;
 }
 
-.haowen-img {
+.articleList-img {
   border-radius: 2px;
 
   margin-top: -40px;
@@ -85,7 +82,7 @@ text-align: center;
   margin-right: 8px;
 }
 
-.haowen-tag {
+.articleList-tag {
   margin-top: 10px;
   margin-left: 10px;
   color: #a6a6a6;
@@ -93,32 +90,32 @@ text-align: center;
   font-size: 12px;
 }
 
-.haowen-collection-text {
+.articleList-collection-text {
   margin-top: 10px;
   margin-left: 5px;
   color: #a6a6a6;
   font-size: 12px;
 }
 
-.haowen-tag-div {
+.articleList-tag-div {
   padding-bottom: 8px;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.haowen-tag-collection-div {
+.articleList-tag-collection-div {
   display: flex;
   width: 100px;
   float: right;
 }
 
-.haowen-tag-img {
+.articleList-tag-img {
   margin-top: 12px;
   width: 13px;
   height: 13px;
 }
-.haowen-tag-comment-img {
+.articleList-tag-comment-img {
   margin-left:20px;
   margin-top: 12px;
   width: 13px;

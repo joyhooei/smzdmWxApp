@@ -27,24 +27,6 @@ Page({
    */
   onLoad: function (options) {
 
-    // wx.request({
-
-    //   url: 'https://api.smzdm.com/v2/util/banner/?type=haojia_jingxuan&f=android&v=8.7',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   method: 'GET',
-    //   success: function (res) {
-    //     console.log(res.data.data.rows)
-
-    //     that.setData({
-    //       banner: res.data.data.rows
-    //     })
-    //   },
-    //   fail: function (res) {
-    //     console.log(res.data)
-    //   }
-    // })
 
     var that = this
     wx.showNavigationBarLoading()

@@ -2,13 +2,13 @@
   "pages": [
 
     "pages/main/main",
-    "pages/haojia/haojia",
+    "pages/priceList/priceList",
     "pages/index/index",
-    "pages/haowen/haowen",
+    "pages/articleList/articleList",
     "pages/logs/logs",
-    "pages/maininfo/maininfo",
-    "pages/haoweninfo/haoweninfo",
-    "pages/newsinfo/newsinfo"
+    "pages/mainInfo/mainInfo",
+    "pages/articleInfo/articleInfo",
+    "pages/newsInfo/newsInfo"
     
     
 
@@ -37,13 +37,13 @@
     },
     {
      
-      "pagePath": "pages/haojia/haojia",
+      "pagePath": "pages/priceList/priceList",
       "iconPath": "images/ic_tab_haojia_normal.png",
       "selectedIconPath": "images/ic_tab_haojia_selected.png",
       "text":"好价"
     },
     {
-      "pagePath": "pages/haowen/haowen",
+      "pagePath": "pages/articleList/articleList",
       "iconPath": "images/ic_tab_haowen_normal.png",
       "selectedIconPath": "images/ic_tab_haowen_selected.png",
       "text": "好文"

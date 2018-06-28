@@ -34,13 +34,13 @@
 				{
 					"id": -1,
 					"name": "haowen",
-					"pathName": "pages/haowen/haowen",
+					"pathName": "pages/articleList/articleList",
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "maininfo",
-					"pathName": "pages/maininfo/maininfo",
+					"name": "mainInfo",
+					"pathName": "pages/mainInfo/mainInfo",
 					"query": ""
 				},
 				{
@@ -51,8 +51,8 @@
 				},
 				{
 					"id": -1,
-					"name": "haojia",
-					"pathName": "pages/haojia/haojia",
+					"name": "priceList",
+					"pathName": "pages/priceList/priceList",
 					"query": ""
 				},
 				{

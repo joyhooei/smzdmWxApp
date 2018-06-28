@@ -1,4 +1,4 @@
-// pages/haoweninfo/haoweninfo.js
+// pages/articleInfo/articleInfo.js
 
 var WxParse=require('../../wxParse/wxParse.js')
 var title

@@ -1,4 +1,4 @@
-/* pages/haoweninfo/haoweninfo.wxss */
+/* pages/articleInfo/articleInfo.wxss */
 @import "../../wxParse/wxParse.wxss";
 
 .article-body{

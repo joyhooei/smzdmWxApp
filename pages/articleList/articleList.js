@@ -1,50 +1,47 @@
-// pages/haojia.js
-
+// pages/articleList/articleList  .js
 var pages = 0
 Page({
 
   /**
    * 页面的初始数据
    */
-
-
   data: {
-    list:[],
+    list: [],
     isHideLoadMore:false
-
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    pages =0
     wx.showNavigationBarLoading()
     var that = this
     wx.request({
-      url: 'https://api.smzdm.com/v1/home/articles_new?f=wxapp&wxapp=zdmapp&limit=20',
+      url: 'https://api.smzdm.com/v1/wxapp/zdmapp/good_articles_list?f=wxapp&wxapp=zdmapp&limit=20',
       header: {
-        'Content-Type': 'application/json'
-      },
+        'Context-Type': 'application/json'
+
+      }
+      ,
       data: {
         offset: pages
-      },
-      method: 'GET',
+      }
+      ,
       success: function (res) {
-        console.log(res.data)
+     
         that.setData({
-          list: res.data.data.rows
+          list: res.data.data
+
         })
+
       },
       fail: function () {
-
-      },complete:function(){
+      
+      },
+      complete:function(){
         wx.hideNavigationBarLoading()
       }
-
     })
-
   },
 
   /**
@@ -79,76 +76,75 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    pages = 0
+    wx.startPullDownRefresh()
+    wx.showNavigationBarLoading()
     var that = this
-    pages=0
-    console.log("onPullDownRefresh")
-wx.stopPullDownRefresh()
-wx.showNavigationBarLoading()
-
     wx.request({
-      url: 'https://api.smzdm.com/v1/home/articles_new?f=wxapp&wxapp=zdmapp&limit=20',
+      url: 'https://api.smzdm.com/v1/wxapp/zdmapp/good_articles_list?f=wxapp&wxapp=zdmapp&limit=20',
       header: {
-        'Content-Type': 'application/json'
-      },
+        'Context-Type': 'application/json'
+
+      }
+      ,
       data: {
         offset: pages
-      },
-      method: 'GET',
+      }
+      ,
       success: function (res) {
+     
         console.log(res.data)
-       
         that.setData({
-          list: res.data.data.rows
+          list: res.data.data
         })
+
       },
       fail: function () {
-     
+      
       },
-      complete:function(){
+      complete: function () {
         wx.hideNavigationBarLoading()
         wx.stopPullDownRefresh()
       }
-
     })
-
-
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    console.log("onReachBottom")
     isHideLoadMore:true
-     var that=this
-      pages+=21
-     wx.request({
-       url: 'https://api.smzdm.com/v1/home/articles_new?f=wxapp&wxapp=zdmapp&limit=20',
-       header: {
-         'Content-Type': 'application/json'
-       },
-       data: {
-         offset: pages
-       },
-       method: 'GET',
-       success: function (res) {
-         console.log(res.data)
-         var list = that.data.list.concat(res.data.data.rows)
-        
-         that.setData({
-           list: list
-           
-         })
-     
-       },
-       fail: function () {
-         
-       },complete:function(){
-         wx.hideNavigationBarLoading()
-       }
+    var that = this
+    pages += 20
+    console.log(pages)
+   
+    wx.showNavigationBarLoading()
+    wx.request({
+      url: 'https://api.smzdm.com/v1/wxapp/zdmapp/good_articles_list?f=wxapp&wxapp=zdmapp&limit=20',
+      header: {
+        'Context-Type': 'application/json'
+      }
+      ,
+      data: {
+        offset: pages
+      }
+      ,
+      success: function (res) {
+    
+        console.log(res)
+        var list = that.data.list.concat(res.data.data)
+        that.setData({
+          list: list
+        })
 
-     })
-
+      },
+      fail: function () {
+       
+      },
+      complete:function(){
+        wx.hideNavigationBarLoading()
+      }
+    })
 
 
   },

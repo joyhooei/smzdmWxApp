@@ -1,4 +1,4 @@
-<!--pages/haoweninfo/haoweninfo.wxml-->
+<!--pages/articleInfo/articleInfo.wxml-->
 <import src="../../wxParse/wxParse.wxml"/>
 <view class="article-body">
 <text style="display:{{display}}" class="yuanchuang">{{yuanchuang}}</text>
