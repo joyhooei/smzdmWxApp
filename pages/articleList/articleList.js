@@ -93,7 +93,7 @@ Page({
       ,
       success: function (res) {
      
-        console.log(res.data)
+      
         that.setData({
           list: res.data.data
         })
@@ -116,7 +116,7 @@ Page({
     isHideLoadMore:true
     var that = this
     pages += 20
-    console.log(pages)
+   
    
     wx.showNavigationBarLoading()
     wx.request({
@@ -131,7 +131,7 @@ Page({
       ,
       success: function (res) {
     
-        console.log(res)
+    
         var list = that.data.list.concat(res.data.data)
         that.setData({
           list: list

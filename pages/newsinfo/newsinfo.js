@@ -1,4 +1,4 @@
-// pages/newsinfo/newsinfo.js
+// pages/newsInfo/newsInfo.js
 
 var WxParse = require('../../wxParse/wxParse.js')
 var title
@@ -18,7 +18,7 @@ Page({
   onLoad: function (options) {
     id = options.id
    var that=this
-   console.info(id)
+
    wx.request({
      url: 'https://api.smzdm.com/v1/wxapp/zdmapp/news_detail?f=wxapp&wxapp=zdmapp',
      data:{
@@ -26,7 +26,7 @@ Page({
      },
      method:'GET'
      ,success:function(res){
-       console.log(res.data.data)
+
        that.setData({
          display:'flex',
          title: res.data.data.article_title,
@@ -95,14 +95,13 @@ Page({
    */
   onShareAppMessage: function (res) {
    if(res.from=='botton'){
-     console.log(res.target)
+     
    }
    return {
      title:title,
-     path:'pages/newsinfo/newsinfo?id={{id}}',
+     path:'pages/newsInfo/newsInfo?id={{id}}',
      success: function (res) {
-      
-       console.log("success")
+   
      }
    }
   

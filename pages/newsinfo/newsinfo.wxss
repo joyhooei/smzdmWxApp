@@ -1,10 +1,11 @@
-/* pages/newsinfo/newsinfo.wxss */
+/* pages/newsInfo/newsInfo.wxss */
 @import "../../wxParse/wxParse.wxss";
 
-.article-body{
+.article-body {
   display: flex;
   flex-direction: column;
 }
+
 .banner {
   margin-top: -35px;
   width: 100%;
@@ -22,36 +23,38 @@
   position: relative;
   z-index: 1;
 }
-.article{
-   display: flex;
+
+.article {
+  display: flex;
   margin-left: 10px;
   margin-right: 10px;
   flex-direction: column;
-
 }
-.article_title{
-   width: 100%;
-    min-height: 60px;
+
+.article_title {
+  width: 100%;
+  min-height: 60px;
   max-height: 90px;
   font-size: 20px;
   font-weight: bold;
-
 }
 
-.author-img{
+.author-img {
   border-radius: 12px;
   width: 24px;
   height: 24px;
 }
-.author-view{
-  width:100%;
+
+.author-view {
+  width: 100%;
   display: flex;
   flex-direction: row;
   height: 30px;
 }
-.author-text{
-margin-top:3px; 
-   margin-left: 10px;
+
+.author-text {
+  margin-top: 3px;
+  margin-left: 10px;
   font-size: 12px;
   max-width: 60px;
   height: 25px;
@@ -60,6 +63,7 @@ margin-top:3px;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
 .author-line {
   background: #969696;
   margin-top: 4px;
@@ -67,11 +71,11 @@ margin-top:3px;
   margin-left: 5px;
   width: 1px;
   height: 13px;
-
 }
-.author-date{
-margin-top:3px; 
-margin-left: 10px;
+
+.author-date {
+  margin-top: 3px;
+  margin-left: 10px;
   font-size: 12px;
   max-width: 60px;
   height: 25px;

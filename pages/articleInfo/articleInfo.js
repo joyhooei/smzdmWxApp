@@ -19,7 +19,7 @@ Page({
     id=options.id
     var that = this
     wx.showNavigationBarLoading()
-    console.info(id)
+  
     wx.request({
       url: 'https://api.smzdm.com/v1/wxapp/zdmapp/post_detail?f=wxapp&wxapp=zdmapp',
       data: {
@@ -29,12 +29,12 @@ Page({
       ,
       method: 'GET',
       success: function (res) {
-        console.log(res.data)
+
         that.setData({
           display:'flex',
           title: res.data.data.article_title,
           banner: res.data.data.article_pic,
-          yuanchuang: '原创',
+          original: '原创',
           article_title: res.data.data.article_title,
           article_avatar: res.data.data.article_avatar,
           article_referrals: res.data.data.article_referrals,
@@ -101,14 +101,14 @@ wx.stopPullDownRefresh()
    */
   onShareAppMessage: function () {
     if (res.from == 'botton') {
-      console.log(res.target)
+ 
     }
     return {
       title: title,
-      path: 'pages/haoweninfo/haoweninfo?id={{id}}',
+      path: 'pages/articleInfo/articleInfo?id={{id}}',
       success: function (res) {
 
-        console.log("success")
+   
       }
     }
   }

@@ -30,7 +30,7 @@ Page({
 
     var that = this
     wx.showNavigationBarLoading()
-    console.log(pages)
+   
     wx.request({
       url: 'https://api.smzdm.com/v1/home/articles?f=wxapp&wxapp=zdmapp&limit=20',
       header: {
@@ -41,7 +41,7 @@ Page({
       },
       method: 'GET',
       success: function (res) {
-        console.log(res.data)
+
 
 
         that.setData({
@@ -60,12 +60,7 @@ Page({
   },
   detail: function (event) {
     
-    wx.navigateTo({
-
-
-      url:  "../../pages/maininfo/maininfo?id=1"
-
-    })
+   
   },
 
   /**
@@ -104,8 +99,7 @@ Page({
   onPullDownRefresh: function () {
     var that = this
     pages = 0
-    console.log("onPullDownRefresh")
-    console.log(pages)
+
 
     wx.showNavigationBarLoading()
     wx.request({
@@ -118,7 +112,7 @@ Page({
       },
       method: 'GET',
       success: function (res) {
-        console.log(res.data)
+     
         that.setData({
           list: res.data.data.rows
         })
@@ -142,10 +136,10 @@ Page({
    */
   onReachBottom: function () {
     pages += 20
-    console.log("onReachBottom")
+
     isHideLoadMore :true
     wx.showNavigationBarLoading()
-    console.log(pages)
+  
     var that = this
     wx.request({
       url: 'https://api.smzdm.com/v1/home/articles?f=wxapp&wxapp=zdmapp&limit=20',
@@ -157,7 +151,7 @@ Page({
       },
       method: 'GET',
       success: function (res) {
-        console.log(res.data)
+     
         var list = that.data.list.concat(res.data.data.rows)
         that.setData({
 

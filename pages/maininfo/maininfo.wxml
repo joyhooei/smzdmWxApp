@@ -3,7 +3,7 @@
 <import src="../../wxParse/wxParse.wxml"/> 
 
 <view  class="banner-view">
-<text style="display:{{display}}" class="jingxuan">{{jingxuan}}</text>  
+<text style="display:{{display}}" class="choice">{{choice}}</text>  
 <view class="bannerImageView" wx:if="{{bannerLenght == '0'}}">
 <image class="bannerImage"  src="{{article_pic}}"/>
 </view>

@@ -1,5 +1,4 @@
-// pages/maininfo/maininfo.js
-
+// pages/mainInfo/mainInfo.js
 var WxParse = require('../../wxParse/wxParse.js')
 var title
 var id
@@ -10,7 +9,7 @@ Page({
    */
   data: {
     display:'none',
-    jingxuan: '精选',
+    choice: '精选',
     duration: 2000,
     indicatorDots: true,
     autoplay: true,
@@ -24,7 +23,6 @@ Page({
   onLoad: function (options) {
     var that = this
     id = options.id
-console.info(id)
     wx.request({
       url: 'https://api.smzdm.com/v1/wxapp/zdmapp/youhui_detail?f=wxapp&wxapp=zdmapp',
       data: {
@@ -107,14 +105,12 @@ console.info(id)
    */
   onShareAppMessage: function () {
     if (res.from == 'botton') {
-      console.log(res.target)
+
     }
     return {
       title: title,
-      path: 'pages/maininfo/maininfo?id={{id}}',
+      path: 'pages/mainInfo/mainInfo?id={{id}}',
       success: function (res) {
-
-        console.log("success")
       }
     }
   }

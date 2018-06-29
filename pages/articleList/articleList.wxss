@@ -1,72 +1,76 @@
 /* pages/articleList/articleList.wxss */
+
 .articleList-body {
   width: 100%;
-  height: 260px;
+  height: 100%;
   display: flex;
   flex-direction: column;
+
 }
 
 .articleList-part {
+
   display: flex;
   flex-direction: column;
 }
 
 .articleList-float-view {
   display: flex;
-  width: 200px;
-  height: 20px;
+  width: 400rpx;
+  height: 40rpx;
   flex-direction: row;
-  left: 10px;
-  top: 120px;
+  left: 20rpx;
+  top: 350rpx;
   position: relative;
   z-index: 1;
 }
 
 .articleList-float-time {
+ 
   display: flex;
-  width: 50px;
-  height: 20px;
+  width: 100rpx;
+  height: 40rpx;
   flex-direction: row;
   float: right;
-  top: 100px;
+  top: 320rpx;
   position: relative;
   z-index: 1;
 }
 
 .articleList-article-author {
-  border-radius: 10px;
-  width: 20px;
-  height: 20px;
+  border-radius: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
 }
 
 .articleList-article-text {
-   height: 15px;
-  margin-top: 3px;
-  font-size: 10px;
-  margin-left: 10px;
-text-align: center;
-     color: #FFF;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-radius: 2px;
+ 
+  height: 30rpx;
+  margin-top: 6rpx;
+  font-size: 20rpx;
+  margin-left: 20rpx;
+  text-align: center;
+  color: #fff;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  border-radius: 4rpx;
   background: #de554f;
 }
 
 .articleList-img {
-  border-radius: 2px;
-
-  margin-top: -40px;
+  border-radius: 4rpx;
   width: 100%;
-  height: 150px;
+  margin-top: -60rpx;
+  height: 400rpx;
 }
 
 .item-article-title {
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  font-size: 15px;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+  font-size: 30rpx;
   color: #000;
-  height: 40px;
+  height: 80rpx;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -77,28 +81,27 @@ text-align: center;
 }
 
 .div-image {
-  margin-top: 8px;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
 }
 
 .articleList-tag {
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
   color: #a6a6a6;
-  width: 250px;
-  font-size: 12px;
+  width: 500rpx;
+  font-size: 24rpx;
 }
 
 .articleList-collection-text {
-  margin-top: 10px;
-  margin-left: 5px;
+  margin-top: 20rpx;
+  margin-left: 10rpx;
   color: #a6a6a6;
-  font-size: 12px;
+  font-size: 24rpx;
 }
 
 .articleList-tag-div {
-  padding-bottom: 8px;
+  padding-bottom: 16rpx;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -106,18 +109,19 @@ text-align: center;
 
 .articleList-tag-collection-div {
   display: flex;
-  width: 100px;
+  width: 200rpx;
   float: right;
 }
 
 .articleList-tag-img {
-  margin-top: 12px;
-  width: 13px;
-  height: 13px;
+  margin-top: 24rpx;
+  width: 26rpx;
+  height: 26rpx;
 }
+
 .articleList-tag-comment-img {
-  margin-left:20px;
-  margin-top: 12px;
-  width: 13px;
-  height: 13px;
+  margin-left: 40rpx;
+  margin-top: 24rpx;
+  width: 26rpx;
+  height: 26rpx;
 }

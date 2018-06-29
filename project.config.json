@@ -45,8 +45,8 @@
 				},
 				{
 					"id": -1,
-					"name": "newsinfo",
-					"pathName": "pages/newsinfo/newsinfo",
+					"name": "newsInfo",
+					"pathName": "pages/newsInfo/newsInfo",
 					"query": ""
 				},
 				{
